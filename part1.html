@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+	<fieldset>
+		<legend> Your Face </legend>
+		Your Image: <input type="file" name="fileToUpload"  required> <br>
+		Image Preview:<img id="preview">  <br>
+	</fieldset> <br>
+
+	<fieldset>
+		<legend> Your General Details</legend>
+		Name: <input type="text" name="Name" placeholder="Your full name" required> <br>
+		Gender: <input type="radio" name="gender" value="Male">Male
+		 <input type="radio" name="gender" value="Female">Female <br>
+		Age: <input type="number" name="age" min="1" max="100" required> <br>
+		Date of Birth: <input type="date" name="birthday" required> <br>
+		Favourite Color: <input type="color" name="color" required> <br>
+		Which country:
+		 <select name="countries">
+		 <option value="NS"> No Selection</option>
+		<option value="In">India</option>
+		<option value="Sri"> Sri Lanka</option>
+		<option value="Pak"> Pakistan</option>
+		<option value="usa"> USA</option>
+		<option value="China">China </option>
+	</select> <br>
+</fieldset><br>
+
+<fieldset>
+	<legend> Your Indicators</legend>
+	<label for="height"> Height: </label>
+	Short <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"> Tall <br>
+
+	<label for="salary"> Salary: </label>
+	Poor <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary"> Rich <br>
+
+</fieldset><br> 
+
+<fieldset>
+	<legend>Your Contact Information</legend>
+	Email: <input type="email" name="email" required> <br>
+	Mobile: <input type="tel" name="usrtel" required> <br>
+	Address: <input type="textarea" rows="3" cols="30" name="address" required> <br>
+	Method to contact you: <input type="checkbox"  name="contact" value="Email">Email
+	<input type="checkbox" name="contact" value="Whatsapp">Whatsapp
+	<input type="checkbox" name="contact" value="In-app chat">In-app chat<br>
+
+</fieldset><br> 
+
+<input type="submit" value="Submit">
+</form>
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	fieldset{
+		background: lightyellow;
+		border: 10px solid yellow;
+		margin-bottom: 10px;
+		width: 720px;
+	}
+
+	label{
+		width: 180px;
+		display: inline-block;
+		text-align: right;
+
+	}
+	label:hover{
+		font-size: 30px;
+	}
+	input:hover{
+		font-size: 30px;
+	}
+	label checkbox radio{
+		width: auto;
+	}
+
+	range{
+		text-align: center;
+	}
+
+	textarea{
+		width: 360px;
+		height: 50px;
+	}
+	</style>
+</head>
+<body>
+<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+	<fieldset>
+		<legend> Your Face </legend>
+
+		<label for="img">Your Image: </label>
+		<input type="file" name="fileToUpload" id="img" required> <br>
+		<label for="preview">Image Preview:</label>
+		<img id="preview">  <br>
+	</fieldset> <br>
+
+	<fieldset>
+		<legend> Your General Details</legend>
+		<label for="name">Name:</label>
+		<input type="text" name="Name" id="name" placeholder="Your full name" required> <br>
+		<label for="gender"> Gender: </label>
+		<input type="radio" name="gender" id="gender" value="Male">Male
+		 <input type="radio" name="gender" id="gender" value="Female">Female <br>
+		 <label for="age">Age: </label>
+		<input type="number" name="age" id="age" min="1" max="100" required> <br>
+		<label for="dob">Date of Birth:</label>
+		 <input type="date" name="birthday" id="dob" required> <br>
+		 <label for="color">Favourite Color:</label>
+		 <input type="color" name="color" id="color" required> <br>
+		 <label for="country">Which country:</label>
+		 <select name="countries" id="country">
+		 <option value="NS"> No Selection</option>
+		<option value="In">India</option>
+		<option value="Sri"> Sri Lanka</option>
+		<option value="Pak"> Pakistan</option>
+		<option value="usa"> USA</option>
+		<option value="China">China </option>
+	</select> <br>
+</fieldset><br>
+
+<fieldset>
+	<legend> Your Indicators</legend>
+	<label for="height"> Height: </label>
+	Short <input type="range" min="0" max="100" step="5" value="50" id="height" name="height"> Tall <br>
+
+	<label for="salary"> Salary: </label>
+	Poor <input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary"> Rich <br>
+
+</fieldset><br> 
+
+<fieldset>
+	<legend>Your Contact Information</legend>
+	<label for="mail"> Email: </label>
+	<input type="email" name="email" id="mail" required> <br>
+	<label for="mobile"> Mobile:</label>
+	<input type="tel" name="usrtel" id="mobile" required> <br>
+	<label for="address"> Address: </label>
+	<input type="textarea" rows="10" cols="60" name="address" id="address" required> <br>
+	<label for="contact">Method to contact you:</label>
+	 <input type="checkbox"  name="contact" id="contact" value="Email">Email
+	<input type="checkbox" name="contact" id="contact" value="Whatsapp">Whatsapp
+	<input type="checkbox" name="contact" id="contact" value="In-app chat">In-app chat<br>
+
+</fieldset><br> 
+
+<input type="submit" value="Submit">
+</form>
+</body>
+</hmtl>
